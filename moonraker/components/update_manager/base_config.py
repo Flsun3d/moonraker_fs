@@ -24,7 +24,7 @@ KLIPPER_DEFAULT_EXEC = os.path.expanduser("~/klippy-env/bin/python")
 
 BASE_CONFIG: Dict[str, Dict[str, str]] = {
     "moonraker": {
-        "origin": "https://github.com/arksine/moonraker.git",
+        "origin": "https://gitee.com/zzcatvs/moonraker.git",
         "requirements": "scripts/moonraker-requirements.txt",
         "venv_args": "-p python3",
         "install_script": "scripts/install-moonraker.sh",
@@ -35,7 +35,7 @@ BASE_CONFIG: Dict[str, Dict[str, str]] = {
     },
     "klipper": {
         "moved_origin": "https://github.com/kevinoconnor/klipper.git",
-        "origin": "https://github.com/Klipper3d/klipper.git",
+        "origin": "https://gitee.com/leexxiangyang/klippe.git",
         "requirements": "scripts/klippy-requirements.txt",
         "venv_args": "-p python2",
         "install_script": "scripts/install-octopi.sh",
