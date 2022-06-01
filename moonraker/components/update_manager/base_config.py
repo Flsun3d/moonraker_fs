@@ -35,7 +35,7 @@ BASE_CONFIG: Dict[str, Dict[str, str]] = {
     },
     "klipper": {
         "moved_origin": "https://github.com/kevinoconnor/klipper.git",
-        "origin": "https://gitee.com/leexxiangyang/klippe.git",
+        "origin": "https://gitee.com/leexxiangyang/klipper.git",
         "requirements": "scripts/klippy-requirements.txt",
         "venv_args": "-p python2",
         "install_script": "scripts/install-octopi.sh",
