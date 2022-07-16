@@ -129,8 +129,6 @@ start_software()
     report_status "Launching Moonraker API Server..."
     #flsun add,fix timelapse.
     ln -sf "/home/pi/moonraker-timelapse/component/timelapse.py" "/home/pi/moonraker/moonraker/components/timelapse.py"
-    #cp -f "/home/pi/KlipperScreen/scripts/webcam.txt" "/home/pi/klipper_config/webcam1.txt"
-    ln -sf "/home/pi/KlipperScreen/scripts/webcam.txt" "/home/pi/klipper_config/webcam1.txt"
     sudo systemctl restart moonraker
 }
 
