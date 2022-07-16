@@ -128,6 +128,7 @@ start_software()
 {
     report_status "Launching Moonraker API Server..."
     #flsun add,fix timelapse
+    bash /home/pi/moonraker-timelapse/install.sh
     sudo ln -sf "/home/pi/moonraker-timelapse/component/timelapse.py" "/home/pi/moonraker/moonraker/components/timelapse.py"
     sudo systemctl restart moonraker
 }
