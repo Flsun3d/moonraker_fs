@@ -127,8 +127,8 @@ check_polkit_rules()
 start_software()
 {
     report_status "Launching Moonraker API Server..."
-    #flsun add,fix timelapse.
-    ln -sf "/home/pi/moonraker-timelapse/component/timelapse.py" "/home/pi/moonraker/moonraker/components/timelapse.py"
+    #flsun add,fix timelapse
+    sudo ln -sf "/home/pi/moonraker-timelapse/component/timelapse.py" "/home/pi/moonraker/moonraker/components/timelapse.py"
     sudo systemctl restart moonraker
 }
 
