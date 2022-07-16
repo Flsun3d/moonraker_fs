@@ -111,10 +111,10 @@ class Machine:
             "reboot_machine", self.sys_provider.reboot)
 
         # IP network shell commands
-        shell_cmd: SCMDComp = self.server.load_component(
-            config, 'shell_command')
-        self.addr_cmd = shell_cmd.build_shell_command("ip -json address")
-        self.iwgetid_cmd = shell_cmd.build_shell_command("iwgetid")
+        self.shell_cmd: SCMDComp = self.server.load_component(
+           config, 'shell_command')#flsun modify ,add self .  before shell_cmd
+        self.addr_cmd = self.shell_cmd.build_shell_command("ip -json address")#flsun modify 
+        self.iwgetid_cmd = self.shell_cmd.build_shell_command("iwgetid")#flsun modify 
         self.init_evt = asyncio.Event()
 
     def _update_log_rollover(self, log: bool = False) -> None:
@@ -156,7 +156,8 @@ class Machine:
                 f"Cannot {ep.split('/')[-1]} from within a "
                 f"{virt_id} container")
         if ep == "/machine/shutdown":
-            await self.sys_provider.shutdown()
+            #await self.sys_provider.shutdown()
+            self.shell_cmd.exec_cmd(f"shutdown -H now")#flsun add.
         elif ep == "/machine/reboot":
             await self.sys_provider.reboot()
         else:
